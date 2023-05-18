@@ -36,6 +36,11 @@ class AppCoordinator {
 
     private func showSettings() {
         let settingsViewController = SettingsViewController.instantiate()
+
+        settingsViewController.didHide = { [weak self] in
+            self?.navigationController.dismiss(animated: true)
+        }
+
         navigationController.present(settingsViewController, animated: true)
     }
 }

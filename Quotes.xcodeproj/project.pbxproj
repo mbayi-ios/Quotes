@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89458DDB2A16A79300C44E27 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89458DDA2A16A79300C44E27 /* AppCoordinator.swift */; };
 		CCE41152229F9651009EF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE41151229F9651009EF1C2 /* AppDelegate.swift */; };
 		CCE41154229F9651009EF1C2 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE41153229F9651009EF1C2 /* QuotesViewController.swift */; };
 		CCE41157229F9651009EF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE41155229F9651009EF1C2 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89458DDA2A16A79300C44E27 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CCE4114E229F9651009EF1C2 /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE41151229F9651009EF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE41153229F9651009EF1C2 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89458DD92A16A77400C44E27 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				89458DDA2A16A79300C44E27 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		CCE41145229F9651009EF1C2 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		CCE41150229F9651009EF1C2 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				89458DD92A16A77400C44E27 /* Coordinators */,
 				CCE41167229F9682009EF1C2 /* Application Delegate */,
 				CCE41166229F967A009EF1C2 /* View Controllers */,
 				CCE41165229F9670009EF1C2 /* Storyboards */,
@@ -222,6 +233,7 @@
 			files = (
 				CCE41169229F96A6009EF1C2 /* QuoteViewController.swift in Sources */,
 				CCE41154229F9651009EF1C2 /* QuotesViewController.swift in Sources */,
+				89458DDB2A16A79300C44E27 /* AppCoordinator.swift in Sources */,
 				CCE41176229FA775009EF1C2 /* FontWeight.swift in Sources */,
 				CCE41171229F9A87009EF1C2 /* QuoteTableViewCell.swift in Sources */,
 				CCE41174229FA6D2009EF1C2 /* UserDefaults+Settings.swift in Sources */,

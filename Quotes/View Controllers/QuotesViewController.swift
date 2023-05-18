@@ -1,17 +1,7 @@
-//
-//  QuotesViewController.swift
-//  Quotes
-//
-//  Created by Bart Jacobs on 30/05/2019.
-//  Copyright © 2019 Code Foundry. All rights reserved.
-//
-
 import UIKit
 
 class QuotesViewController: UIViewController {
 
-    // MARK: - Properties
-    
     private let quotes: [Quote] = [
         Quote(author: "Marie Curie",        content: "Be less curious about people and more curious about ideas."),
         Quote(author: "Albert Einstein",    content: "Life is like riding a bicycle. To keep your balance you must keep moving."),
@@ -24,8 +14,7 @@ class QuotesViewController: UIViewController {
         Quote(author: "Rosalind Franklin",  content: "Science and everyday life cannot and should not be separated."),
         Quote(author: "Charles Darwin",     content: "A man who dares to waste one hour of time has not discovered the value of life.")
     ]
-    
-    // MARK: -
+
     
     @IBOutlet var tableView: UITableView! {
         didSet {
@@ -34,8 +23,6 @@ class QuotesViewController: UIViewController {
             tableView.dataSource = self
         }
     }
-    
-    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

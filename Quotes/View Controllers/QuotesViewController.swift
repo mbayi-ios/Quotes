@@ -2,6 +2,8 @@ import UIKit
 
 class QuotesViewController: UIViewController, Storyboardable {
 
+    var didShowQuote: ((Quote) -> Void)?
+
     private let quotes: [Quote] = [
         Quote(author: "Marie Curie",        content: "Be less curious about people and more curious about ideas."),
         Quote(author: "Albert Einstein",    content: "Life is like riding a bicycle. To keep your balance you must keep moving."),
@@ -34,30 +36,7 @@ class QuotesViewController: UIViewController, Storyboardable {
         setupNotificationHandling()
     }
     
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else {
-            return
-        }
-        
-        if identifier == "Quote" {
-            guard let destination = segue.destination as? QuoteViewController else {
-                return
-            }
-            
-            guard let indexPath = tableView.indexPathForSelectedRow else {
-                return
-            }
-            
-            // Fetch Quote
-            let quote = quotes[indexPath.row]
-            
-            // Configure Destination
-            destination.quote = quote
-        }
-    }
-    
+
     // MARK: - Actions
     
     @IBAction func settings(_ sender: Any) {
@@ -107,6 +86,10 @@ extension QuotesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let quote = quotes[indexPath.row]
+
+        didShowQuote?(quote)
     }
     
 }

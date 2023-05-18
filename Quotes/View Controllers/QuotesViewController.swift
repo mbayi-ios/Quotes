@@ -1,6 +1,6 @@
 import UIKit
 
-class QuotesViewController: UIViewController {
+class QuotesViewController: UIViewController, Storyboardable {
 
     private let quotes: [Quote] = [
         Quote(author: "Marie Curie",        content: "Be less curious about people and more curious about ideas."),

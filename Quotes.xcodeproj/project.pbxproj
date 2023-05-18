@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89458DDB2A16A79300C44E27 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89458DDA2A16A79300C44E27 /* AppCoordinator.swift */; };
+		89458DDE2A16AE2100C44E27 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89458DDD2A16AE2100C44E27 /* Storyboardable.swift */; };
 		CCE41152229F9651009EF1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE41151229F9651009EF1C2 /* AppDelegate.swift */; };
 		CCE41154229F9651009EF1C2 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE41153229F9651009EF1C2 /* QuotesViewController.swift */; };
 		CCE41157229F9651009EF1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE41155229F9651009EF1C2 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		89458DDA2A16A79300C44E27 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		89458DDD2A16AE2100C44E27 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		CCE4114E229F9651009EF1C2 /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE41151229F9651009EF1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE41153229F9651009EF1C2 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		89458DDC2A16AE1300C44E27 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				89458DDD2A16AE2100C44E27 /* Storyboardable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		CCE41145229F9651009EF1C2 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		CCE41150229F9651009EF1C2 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				89458DDC2A16AE1300C44E27 /* Protocols */,
 				89458DD92A16A77400C44E27 /* Coordinators */,
 				CCE41167229F9682009EF1C2 /* Application Delegate */,
 				CCE41166229F967A009EF1C2 /* View Controllers */,
@@ -231,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89458DDE2A16AE2100C44E27 /* Storyboardable.swift in Sources */,
 				CCE41169229F96A6009EF1C2 /* QuoteViewController.swift in Sources */,
 				CCE41154229F9651009EF1C2 /* QuotesViewController.swift in Sources */,
 				89458DDB2A16A79300C44E27 /* AppCoordinator.swift in Sources */,

@@ -19,6 +19,10 @@ class AppCoordinator {
             self?.showQuote(quote)
         }
 
+        quotesViewController.didShowSettings = {[weak self] in
+            self?.showSettings()
+        }
+
         navigationController.pushViewController(quotesViewController, animated: true)
     }
 
@@ -28,5 +32,10 @@ class AppCoordinator {
         quoteViewController.quote = quote
 
         navigationController.pushViewController(quoteViewController, animated: true)
+    }
+
+    private func showSettings() {
+        let settingsViewController = SettingsViewController.instantiate()
+        navigationController.present(settingsViewController, animated: true)
     }
 }

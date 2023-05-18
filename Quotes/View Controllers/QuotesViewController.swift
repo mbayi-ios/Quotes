@@ -4,6 +4,8 @@ class QuotesViewController: UIViewController, Storyboardable {
 
     var didShowQuote: ((Quote) -> Void)?
 
+    var didShowSettings: (() -> Void)?
+
     private let quotes: [Quote] = [
         Quote(author: "Marie Curie",        content: "Be less curious about people and more curious about ideas."),
         Quote(author: "Albert Einstein",    content: "Life is like riding a bicycle. To keep your balance you must keep moving."),
@@ -40,10 +42,7 @@ class QuotesViewController: UIViewController, Storyboardable {
     // MARK: - Actions
     
     @IBAction func settings(_ sender: Any) {
-        let settingsViewController = SettingsViewController.instantiate()
-        
-        // Present Settings View Controller
-        present(settingsViewController, animated: true)
+        didShowSettings?()
     }
     
     // MARK: - Helper Methods

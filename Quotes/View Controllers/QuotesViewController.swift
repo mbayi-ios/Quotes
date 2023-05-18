@@ -61,9 +61,7 @@ class QuotesViewController: UIViewController, Storyboardable {
     // MARK: - Actions
     
     @IBAction func settings(_ sender: Any) {
-        guard let settingsViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: SettingsViewController.storyboardIdentifier) as? SettingsViewController else {
-            fatalError("Unable to Instantiate Settings View Controller")
-        }
+        let settingsViewController = SettingsViewController.instantiate()
         
         // Present Settings View Controller
         present(settingsViewController, animated: true)
